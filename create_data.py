@@ -18,11 +18,10 @@ def atom_features(atom, explicit_H = False, use_chirality=False):
         'F',
         'P',
         'S',
-        'Si'
+        'Si',
         'Cl',
         'Br',
         'I',
-        'other'
       ]) + one_of_k_encoding(atom.GetDegree(),
                              [0,1, 2, 3, 4 ,5]) + \
               one_of_k_encoding_unk(atom.GetFormalCharge(),[-1,0,1])+ one_of_k_encoding(atom.GetExplicitValence() ,[0,1,2,3,4,5,6]) + \
